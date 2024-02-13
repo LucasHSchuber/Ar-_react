@@ -1,0 +1,25 @@
+/* Settings CSs */
+
+.hr{
+    border-color: rgb(138, 138, 138);
+}
+
+input{
+    width: 10em;
+    height: 2.5em;
+}
+
+
+.add-btn {
+    background-color: rgb(17, 17, 17);
+    border: none;
+    color: rgb(223, 223, 223);
+    padding: 0.6em 1em;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.add-btn:hover {
+    background-color: black;
+    color: rgb(223, 223, 223);
+}

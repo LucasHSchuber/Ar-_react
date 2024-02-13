@@ -98,22 +98,22 @@ function Information() {
     return (
         <div className='py-md-4 py-sm-2'>
             <h4 className='py-md-3 '>Information</h4>
-            <div className='wrapper-info py-4'>
+            <div className='wrapper-info py-4 row'>
                 {information.map(info => (
-                    <div className='info-box d-flex justify-content-between' key={info.id}>
+                    <div className='info-box col-md-4 d-flex' key={info.id}>
                         <div>
                             <h5 className='info-title'>{info.title}</h5>
-                            <span>Av: {info.writer}</span>
+                            <span>Av: {info.writer}  ({info.created.substring(0, 10)})</span>
                             <p className='info-description'>{info.description}</p>
                         </div>
-                        <div>
+                        <div className='del-info-btn-box'>
                             <button className="del-info-btn" onClick={() => confirmDeleteInformation(info)}><i class="fa-solid fa-trash"></i></button>
                         </div>
                     </div>
                 ))}
             </div>
 
-            <button className="information-button" onClick={openInformationForm}>
+            <button className="information-button my-3" onClick={openInformationForm}>
                 {openForm ? (
                     <>
                         Skriv nytt <i className="fa-solid fa-chevron-down"></i>
@@ -126,6 +126,7 @@ function Information() {
             </button>
 
             <div id="information-form">
+                <h5>Skriv nytt inlägg:</h5>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="name">Namn</label>
@@ -164,7 +165,7 @@ function Information() {
                     </div>
 
                     <div>
-                        <button type='submit' >Skicka <i class="fa-solid fa-plus"></i></button>
+                        <button className="send-btn" type='submit' >Skicka <i class="fa-solid fa-plus"></i></button>
                     </div>
                 </form>
 

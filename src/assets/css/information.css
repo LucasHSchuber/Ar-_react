@@ -14,7 +14,7 @@ span {
 }
 
 .info-box {
-    padding: 1em 0;
+    padding: 1em 1em;
     border-bottom: 0.5px solid rgb(132, 132, 132);
 }
 
@@ -36,6 +36,7 @@ form {
     width: 50%;
 }
 
+
 .del-info-btn {
     background-color: inherit;
     border: none;
@@ -49,7 +50,34 @@ form {
     color: rgb(255, 115, 115);
 }
 
+.information-button {
+    background-color: rgb(17, 17, 17);
+    border: none;
+    color: rgb(223, 223, 223);
+    padding: 0.6em 1em;
+    border-radius: 5px;
+    transition: 0.2s;
+}
 
+.information-button:hover {
+    background-color: black;
+    color: rgb(223, 223, 223);
+}
+
+.send-btn {
+    background-color: rgb(17, 17, 17);
+    border: none;
+    color: rgb(223, 223, 223);
+    padding: 0.6em 1em;
+    border-radius: 5px;
+    transition: 0.2s;
+    
+}
+
+.send-btn:hover {
+    background-color: black;
+    color: rgb(223, 223, 223);
+}
 
 @media (max-width: 772px) {
     .form-group input {
