@@ -12,7 +12,7 @@ function Footer() {
     return (
         <header>
             <div className="footer">
-                <p>Footer</p>
+                <p></p>
             </div>
         </header>
     );

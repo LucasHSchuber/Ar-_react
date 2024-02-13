@@ -1,1 +1,64 @@
 /* Information.css */
+
+
+.wrapper-info {}
+
+.info-title {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+span {
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+.info-box {
+    padding: 1em 0;
+    border-bottom: 0.5px solid rgb(132, 132, 132);
+}
+
+#information-form {
+    display: none;
+}
+
+form {
+    text-align: left;
+}
+
+.form-group input {
+    height: 2.6em;
+    width: 50%;
+}
+
+.form-group textarea {
+    height: 7em;
+    width: 50%;
+}
+
+.del-info-btn {
+    background-color: inherit;
+    border: none;
+    color: rgb(255, 163, 163);
+    transition: 0.2s;
+}
+
+.del-info-btn:hover {
+    background-color: inherit;
+    border: none;
+    color: rgb(255, 115, 115);
+}
+
+
+
+@media (max-width: 772px) {
+    .form-group input {
+        height: 2.6em;
+        width: 90%;
+    }
+
+    .form-group textarea {
+        height: 2.6em;
+        width: 90%;
+    }
+}

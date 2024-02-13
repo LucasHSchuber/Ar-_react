@@ -29,6 +29,12 @@ function Header() {
             <Nav.Link as={Link} to="/additem" className='header-link'>
               Lägg till vara
             </Nav.Link>
+            <Nav.Link as={Link} to="/information" className='header-link' >
+              Information
+            </Nav.Link>
+            <Nav.Link as={Link} to="/settings" className='header-link' >
+              Inställningar
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -12,9 +12,9 @@ function Settings() {
 
 
     return (
-        <div className=''>
+        <div className='py-md-4 py-sm-2'>
+            <h4 className='py-md-3 '>Inställningar</h4>
 
-            <p>Settings</p>
             <ul>
                 <li>Lägga till kategori och enhet</li>
                 <li>ta bort kategori och enhet</li>

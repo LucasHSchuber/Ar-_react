@@ -27,7 +27,7 @@ td {
 
 input {
     height: 2em;
-    width: 5em;
+    width: 2em;
 }
 
 
@@ -58,12 +58,12 @@ input {
 
 @media (max-width: 772px) {
     table {
-        font-size: 0.9em;
+        font-size: 0.97em;
     }
 
     input {
         height: 2.5em;
-        width: 4em;
+        width: 2em;
     }
    
     .edit-btn,
@@ -118,13 +118,6 @@ input {
     padding: 20px 0;
     text-align: left;
 }
-/* 
-.modal-footer {
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-    text-align: right;
-} */
-
 
 .modal-input {
     height: 2em;
