@@ -1,0 +1,55 @@
+form {
+    text-align: left;
+}
+
+.form-group input {
+    height: 2.6em;
+}
+
+.form-group select {
+    height: 2.6em;
+}
+
+.add-btn {
+    background-color: rgb(0, 0, 0);
+    box-shadow: 2px 2px 10px 2px rgba(136, 136, 136, 0.15);
+    font-size: 1.1em;
+    color: white;
+    width: fit-content;
+    padding: 0.8em 1.7em;
+    border: none;
+    margin: 0 0.1em;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+
+.add-btn:hover {
+    background-color: rgb(11, 11, 11);
+    box-shadow: 0 4px 6px 2px rgba(151, 151, 151, 0);
+    width: fit-content;
+    padding: 0.8em 1.7em;
+    border: none;
+    margin: 0 0.1em;
+}
+
+.hr{
+    border: 0.2px solid rgb(89, 89, 89);
+}
+
+
+.error-message{
+    color:rgb(255, 175, 175);
+    font-weight: 800;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+@media (min-width: 772px) {
+    .form-group input {
+        height: 2.6em;
+    }
+
+    .form-group select {
+        height: 2.6em;
+    }
+}
