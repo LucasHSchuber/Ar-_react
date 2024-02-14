@@ -21,7 +21,7 @@ function Index() {
     const [searchResult, setSearchResult] = useState("");
 
 
-    
+
 
 
 
@@ -95,11 +95,15 @@ function Index() {
 
     const stockUpdate = async (id, amount) => {
         console.log(id, amount);
-        const response = await axios.put(`http://localhost:5249/api/item/updatestock/${id}?amount=${amount}`);
+
         try {
-            console.log(response.data);
-            // Fetch updated items after deleted
-            fetchItems();
+            if (amount !== "") { //make sure input not empty to update db with empty variable
+
+                const response = await axios.put(`http://localhost:5249/api/item/updatestock/${id}?amount=${amount}`);
+                console.log(response.data);
+                fetchItems();
+            }
+
         } catch (error) {
             console.log(error);
         }
@@ -112,7 +116,6 @@ function Index() {
             deleteItem(item.itemID);
         }
     }
-
 
     const deleteItem = async (id) => {
         console.log(id);
@@ -216,7 +219,8 @@ function Index() {
                             <td style={{ border: 'none', borderBottom: '1px dotted black' }}>
                                 <input
                                     style={{ border: 'none' }}
-                                    type="text"
+                                    type="number"
+                                    pattern="[0-9]*"
                                     value={item.Amount}
                                     onChange={(e) => stockUpdate(item.itemID, e.target.value)}
                                 />

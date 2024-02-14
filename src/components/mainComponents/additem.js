@@ -91,10 +91,10 @@ function AddItem() {
             console.log(response.data);
             // Reset form fields after successful submission
             setItemName('');
-            setCategoryID('');
-            setUnitID('');
-            setAmount('');
-            setQuantity('');
+            // setCategoryID('');
+            // setUnitID('');
+            // setAmount('');
+            // setQuantity('');
 
             fetchItemsToday();
         } catch (error) {

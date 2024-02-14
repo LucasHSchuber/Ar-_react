@@ -8,8 +8,9 @@ input{
     width: 10em;
     height: 2.5em;
 }
-
-
+.form-group input{
+    width: 10em;
+}
 .add-btn {
     background-color: rgb(17, 17, 17);
     border: none;
