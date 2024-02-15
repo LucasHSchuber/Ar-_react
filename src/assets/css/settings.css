@@ -1,26 +1,35 @@
 /* Settings CSs */
 
-.hr{
+.hr {
     border-color: rgb(138, 138, 138);
 }
 
-input{
+input {
     width: 10em;
-    height: 2.5em;
+    height: 2.6em;
 }
-.form-group input{
+
+.form-group-settings input {
     width: 10em;
+    height: 2.6em;
 }
-.add-btn {
+
+.form-group-settings select {
+    height: 2.6em;
+}
+
+.add-btn-settings {
     background-color: rgb(17, 17, 17);
     border: none;
     color: rgb(223, 223, 223);
     padding: 0.6em 1em;
-    border-radius: 5px;
+    border-radius: 2px;
     transition: 0.2s;
 }
 
-.add-btn:hover {
+.add-btn-settings:hover {
     background-color: black;
     color: rgb(223, 223, 223);
 }
+
+

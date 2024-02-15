@@ -97,7 +97,7 @@ function Information() {
 
     return (
         <div className='py-md-4 py-sm-2'>
-            <h4 className='py-md-3 '>Information</h4>
+            <h4 className='py-3 '>Information</h4>
             <div className='wrapper-info py-4 row'>
                 {information.map(info => (
                     <div className='info-box col-md-4 d-flex' key={info.id}>

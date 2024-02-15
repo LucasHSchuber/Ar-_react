@@ -1,6 +1,14 @@
 /* Home.css */
 
 
+.home-wrapper {
+    background-image: url("../../assets/images/bg.jpg");
+    height: 100vh;
+    background-size: cover;
+    /* This will ensure the entire background image is covered within the element */
+    background-position: center;
+}
+
 .nav-wrapper {
     width: 100%;
 }
@@ -10,28 +18,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 0.5px solid rgb(179, 179, 179);
-    background-color: rgb(243, 243, 243);
+    border: 0.5px solid rgb(148, 148, 148);
+    background-color: rgb(243, 243, 243, 0.75);
     color: #2e2e2e;
-    border-radius: 6px;
+    border-radius: 1px;
     height: 10em;
     /* Adjust the height */
     width: 10em;
     /* Adjust the width */
     margin: 0.2em;
-    box-shadow: 0 4px 8px rgba(202, 202, 202, 0.3);
+    box-shadow: 0 4px 8px rgba(254, 254, 254, 0.5);
     transition: 0.2s;
     cursor: pointer;
 
 }
 
 .nav-box:hover {
-    border: 0.5px solid rgb(61, 61, 61);
-    background-color: rgb(255, 255, 255);
+    border: 0.5px solid rgb(34, 34, 34);
+    background-color: rgb(243, 243, 243, 0.4);
     color: #000000;
-    border-radius: 1px;
+    border-radius: 4px;
     /* padding: 3em 5em; */
-    box-shadow: 0 4px 8px rgba(184, 184, 184, 0.1);
+    box-shadow: 0 4px 8px rgba(254, 254, 254, 0.1);
     margin: 0.2em;
     text-decoration: none;
 }

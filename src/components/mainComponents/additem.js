@@ -108,13 +108,35 @@ function AddItem() {
 
 
 
+    const confirmDelete = (item) => {
+        if (window.confirm("Är du säker på att du vill radera '" + item.itemName + "' från köket?")) {
+            deleteItem(item.itemID);
+        }
+    }
+
+    const deleteItem = async (id) => {
+        console.log(id);
+        try {
+            // Send delete request to the API
+            await axios.delete(`http://localhost:5249/api/item/${id}`);
+            console.log("Item deleted");
+            // Fetch updated items after deleted
+            fetchItemsToday();
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+
+
+
 
     return (
 
         <div className='py-md-4 py-sm-2'>
-            <h4 className='py-md-3'>Lägg till vara</h4>
+            <h4 className='py-3'>Lägg till vara</h4>
             <form onSubmit={handleSubmit}>
-                <div className="form-group">
+                <div className="form-group-additem">
                     <label htmlFor="itemName">Vara</label>
                     <input
                         type="text"
@@ -125,7 +147,7 @@ function AddItem() {
                         required
                     />
                 </div>
-                <div className="form-group">
+                <div className="form-group-additem">
                     <label htmlFor="amount">Antal</label>
                     <input
                         type="number"
@@ -137,7 +159,7 @@ function AddItem() {
                     />
                 </div>
                 <div className='d-flex'>
-                    <div className="form-group">
+                    <div className="form-group-additem">
                         <label htmlFor="quantity">Mängd</label>
                         <input
                             type="number"
@@ -148,7 +170,7 @@ function AddItem() {
                             required
                         />
                     </div>
-                    <div className="form-group mx-1">
+                    <div className="form-group-additem mx-1 mt-1">
                         <label htmlFor="unitId" >Enhet</label>
                         <select className="modal-input initial-option" type="number" name="unitId" value={unitID}
                             onChange={(e) => setUnitID(e.target.value)}>
@@ -159,7 +181,7 @@ function AddItem() {
                         </select>
                     </div>
                 </div>
-                <div className="form-group">
+                <div className="form-group-additem">
                     <label htmlFor="categoryID">Kategori</label>
                     <select className="modal-input" type="number" name="categoryID" value={categoryID}
                         onChange={(e) => setCategoryID(e.target.value)}>
@@ -170,7 +192,7 @@ function AddItem() {
                     </select>
                 </div>
 
-                <button className="add-btn mt-3" type="submit">Lägg till vara <i class="fa-solid fa-plus"></i></button>
+                <button className="add-btn-additem mt-3" type="submit">Lägg till vara <i class="fa-solid fa-plus"></i></button>
             </form>
 
             {error.errorAlreadyExistsInDb && (
@@ -199,14 +221,9 @@ function AddItem() {
                                 <td>{item.itemName}</td>
                                 <td>{item.quantity} {item.unitName}</td>
                                 <td>{item.categoryName}</td>
-                                {/* <td>{item.unitName}</td> */}
-                                <td className='d-flex'>
-                                    <p>{item.amount}</p>
-                                </td>
+                                <td>{item.amount}</td>
                                 <td>
-                                    {/* Button to delete item */}
-                                    {/* <button className="del-btn" onClick={() => confirmDelete(item)}>Delete</button>
-                                    <button className="edit-btn" onClick={() => openEditModal(item)}>Edit</button> */}
+                                    <button className="del-btn" onClick={() => confirmDelete(item)}><i class="fa-solid fa-trash"></i></button>
                                 </td>
                             </tr>
                         ))}

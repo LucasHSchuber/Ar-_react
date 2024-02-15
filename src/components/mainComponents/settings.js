@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 //import css
@@ -211,22 +210,23 @@ function Settings() {
 
     return (
         <div className='py-md-4 py-sm-2'>
-            <h4 className='py-md-3 '>Inställningar</h4>
+            <h4 className='py-3'>Inställningar</h4>
 
             <div>
                 <div className='my-4'>
-                    <h5>Hantera kategorier</h5>
-                    <p>Alla befintliga kategorier</p>
-                    <div className="form-group">
+                    <h5 className='my-3'>Hantera kategorier</h5>
+                    <p>Radera / Uppdatera / Lägg till nya kategorier</p>
+                    {/* <p>Alla befintliga kategorier</p> */}
+                    <div className="form-group-settings my-2">
                         <select className="modal-input" type="number" name="categoryID" onChange={(e) => setDeletedCategoryId(e.target.value)}>
                             <option value="">Välj kategori</option>
                             {categories.map(category => (
                                 <option key={category.categoryID} value={category.categoryID}>{category.categoryName}</option>
                             ))}
                         </select>
-                        <button className="add-btn mx-1" type='submit' onClick={() => confirmDeleteCategory(deletedCategoryId)}>Radera kategori</button>
+                        <button className="add-btn-settings mx-1" type='submit' onClick={() => confirmDeleteCategory(deletedCategoryId)}>Radera kategori <i class="fa-solid fa-trash-can"></i></button>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group-settings">
                         <select className="modal-input" type="number" name="categoryID" onChange={(e) => setOldCategoryId(e.target.value)}>
                             <option value="">Välj kategori</option>
                             {categories.map(category => (
@@ -242,42 +242,45 @@ function Settings() {
                             required
                         >
                         </input>
-                        <button className="add-btn mx-1" type='submit' onClick={() => confirmEditCategory(oldCategoryId, updatedCategory)}>Ändra</button>
+                        <button className="add-btn-settings mx-1" type='submit' onClick={() => confirmEditCategory(oldCategoryId, updatedCategory)}>Spara ändringar <i class="fa-solid fa-check"></i></button>
                     </div>
-                    <form onSubmit={(e) => PostNewCategory(e, newCategory)}>
-                        <label htmlFor='category'></label>
-                        <input
-                            id="category"
-                            placeholder='Kategori'
-                            value={newCategory}
-                            onChange={(e) => setNewCategory(e.target.value)}
-                            required
-                        >
-                        </input>
-                        <button className="add-btn mx-1" type='submit' >Lägg till kategori</button>
+                    <div>
+                        <form onSubmit={(e) => PostNewCategory(e, newCategory)}>
+                            <label htmlFor='category'></label>
+                            <input
+                                id="category"
+                                placeholder='Kategori'
+                                value={newCategory}
+                                onChange={(e) => setNewCategory(e.target.value)}
+                                required
+                            >
+                            </input>
+                            <button className="add-btn-settings mx-1" type='submit' >Lägg till kategori <i class="fa-solid fa-plus"></i></button>
 
-                        {error.category && (
-                            <div className="mt-3">Ops.. {error.category}</div>
-                        )}
+                            {error.category && (
+                                <div className="mt-3">Ops.. {error.category}</div>
+                            )}
 
-                    </form>
+                        </form>
+                    </div>
                 </div>
 
                 <hr className='hr'></hr>
 
                 <div className='my-4'>
-                    <h5>Hantera enheter</h5>
-                    <p>Alla befintliga enheter</p>
-                    <div className="form-group">
+                    <h5 className='my-3'>Hantera enheter</h5>
+                    <p>Radera / Uppdatera / Lägg till nya enheter</p>
+                    {/* <p>Alla befintliga enheter</p> */}
+                    <div className="form-group-settings my-2">
                         <select className="modal-input initial-option" type="number" name="unitID" onChange={(e) => setDeletedUnitId(e.target.value)}>
                             <option value="" >Välj enhet</option>
                             {units.map(unit => (
                                 <option key={unit.unitID} value={unit.unitID}>{unit.unitName}</option>
                             ))}
                         </select>
-                        <button className="add-btn mx-1" type='submit' onClick={() => confirmDeleteUnit(deletedUnitId)}>Radera enhet</button>
+                        <button className="add-btn-settings mx-1" type='submit' onClick={() => confirmDeleteUnit(deletedUnitId)}>Radera enhet <i class="fa-solid fa-trash-can"></i></button>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group-settings">
                         <select className="modal-input" type="number" name="UnitID" onChange={(e) => setOldUnitId(e.target.value)}>
                             <option value="">Välj kategori</option>
                             {units.map(unit => (
@@ -293,7 +296,7 @@ function Settings() {
                             required
                         >
                         </input>
-                        <button className="add-btn mx-1" type='submit' onClick={() => confirmEditUnit(oldUnitId, updatedUnit)}>Ändra</button>
+                        <button className="add-btn-settings mx-1" type='submit' onClick={() => confirmEditUnit(oldUnitId, updatedUnit)}>Spara ändringar <i class="fa-solid fa-check"></i></button>
                     </div>
                     <form onSubmit={(e) => PostNewUnit(e, newUnit)}>
                         <label htmlFor='unit'></label>
@@ -305,7 +308,7 @@ function Settings() {
                             required
                         >
                         </input>
-                        <button className="add-btn mx-1" type='submit' >Lägg till enhet</button>
+                        <button className="add-btn-settings mx-1" type='submit' >Lägg till enhet <i class="fa-solid fa-plus"></i></button>
 
                         {error.unit && (
                             <div className="mt-3">Ops.. {error.unit}</div>
