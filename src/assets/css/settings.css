@@ -16,6 +16,7 @@ input {
 
 .form-group-settings select {
     height: 2.6em;
+    color: black !important;
 }
 
 .add-btn-settings {
