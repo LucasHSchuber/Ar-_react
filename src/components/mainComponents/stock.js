@@ -268,7 +268,7 @@ function Stock() {
                                     </div>
                                     <div className='d-flex'>
                                         <div className="form-group-modal">
-                                            <label htmlFor="itemName">Quantity</label>
+                                            <label htmlFor="itemName">Mängd</label>
                                             <input className="modal-input" type="text" name="quantity" value={editedItem.quantity} onChange={handleInputChange} />
                                         </div>
                                         <div className="form-group-modal ml-1">

@@ -31,9 +31,15 @@ function App() {
               </Routes>
             </div>
 
+            <div>
+              <Routes>
+                <Route path="/" element={<Navigate to="/home" />} />
+              </Routes>
+            </div>
+
             <div className='container'>
               <Routes>
-                <Route path="/stock" element={<Stock />} />
+                <Route path="/kitchen" element={<Stock />} />
               </Routes>
             </div>
 

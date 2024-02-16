@@ -226,7 +226,8 @@ function Settings() {
                         </select>
                         <button className="add-btn-settings mx-1" type='submit' onClick={() => confirmDeleteCategory(deletedCategoryId)}>Radera kategori <i class="fa-solid fa-trash-can"></i></button>
                     </div>
-                    <div className="form-group-settings">
+                    <hr className='hr-divider'></hr>
+                    <div className="form-group-settings my-4">
                         <select className="modal-input" type="number" name="categoryID" onChange={(e) => setOldCategoryId(e.target.value)}>
                             <option value="">Välj kategori</option>
                             {categories.map(category => (
@@ -242,8 +243,9 @@ function Settings() {
                             required
                         >
                         </input>
-                        <button className="add-btn-settings mx-1" type='submit' onClick={() => confirmEditCategory(oldCategoryId, updatedCategory)}>Spara ändringar <i class="fa-solid fa-check"></i></button>
+                        <button className="add-btn-settings btn-responsive-settings mx-sm-1" type='submit' onClick={() => confirmEditCategory(oldCategoryId, updatedCategory)}>Spara ändringar <i class="fa-solid fa-check"></i></button>
                     </div>
+                    <hr className='hr-divider'></hr>
                     <div>
                         <form onSubmit={(e) => PostNewCategory(e, newCategory)}>
                             <label htmlFor='category'></label>
@@ -265,7 +267,7 @@ function Settings() {
                     </div>
                 </div>
 
-                <hr className='hr'></hr>
+                <hr className='hr my-5 my-md-1'></hr>
 
                 <div className='my-4'>
                     <h5 className='my-3'>Hantera enheter</h5>
@@ -280,7 +282,8 @@ function Settings() {
                         </select>
                         <button className="add-btn-settings mx-1" type='submit' onClick={() => confirmDeleteUnit(deletedUnitId)}>Radera enhet <i class="fa-solid fa-trash-can"></i></button>
                     </div>
-                    <div className="form-group-settings">
+                    <hr className='hr-divider'></hr>
+                    <div className="form-group-settings my-4">
                         <select className="modal-input" type="number" name="UnitID" onChange={(e) => setOldUnitId(e.target.value)}>
                             <option value="">Välj kategori</option>
                             {units.map(unit => (
@@ -296,8 +299,9 @@ function Settings() {
                             required
                         >
                         </input>
-                        <button className="add-btn-settings mx-1" type='submit' onClick={() => confirmEditUnit(oldUnitId, updatedUnit)}>Spara ändringar <i class="fa-solid fa-check"></i></button>
+                        <button className="add-btn-settings btn-responsive-settings mx-sm-1" type='submit' onClick={() => confirmEditUnit(oldUnitId, updatedUnit)}>Spara ändringar <i class="fa-solid fa-check"></i></button>
                     </div>
+                    <hr className='hr-divider'></hr>
                     <form onSubmit={(e) => PostNewUnit(e, newUnit)}>
                         <label htmlFor='unit'></label>
                         <input

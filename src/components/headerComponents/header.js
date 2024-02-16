@@ -36,7 +36,7 @@ function Header() {
             {/* <Nav.Link as={Link} to="/home" className='header-link' onClick={handleLinkClick}>
               Arå
             </Nav.Link> */}
-            <Nav.Link as={Link} to="/stock" className='header-link' onClick={handleLinkClick}>
+            <Nav.Link as={Link} to="/kitchen" className='header-link' onClick={handleLinkClick}>
               Köket
             </Nav.Link>
             <Nav.Link as={Link} to="/additem" className='header-link'onClick={handleLinkClick}>
