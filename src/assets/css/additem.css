@@ -8,6 +8,7 @@ form {
 
 .form-group-additem select {
     height: 2.6em;
+    color: black !important;
 }
 
 .add-btn-additem {
@@ -47,5 +48,6 @@ form {
     .form-group-additem select {
         height: 2.6em;
         width: 10em;
+        color: black !important;
     }
 }

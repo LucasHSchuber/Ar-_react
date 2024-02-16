@@ -56,7 +56,7 @@ function Home() {
         <div className='home-wrapper' id="home-wrapper" >
 
             <div className='nav-wrapper d-flex justify-content-center'>
-                <Link to="/stock" className='nav-box'>
+                <Link to="/kitchen" className='nav-box'>
                     <div>
                         <h6>Köket</h6>
                     </div>
