@@ -209,8 +209,8 @@ function Settings() {
 
 
     return (
-        <div className='py-md-4 py-sm-2'>
-            <h4 className='py-3'>Inställningar</h4>
+        <div className='py-md-4 py-sm-2 pb-5'>
+            <h4 className='page-title py-3'>Inställningar</h4>
 
             <div>
                 <div className='my-4'>

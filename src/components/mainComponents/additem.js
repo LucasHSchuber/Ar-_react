@@ -133,8 +133,8 @@ function AddItem() {
 
     return (
 
-        <div className='py-md-4 py-sm-2'>
-            <h4 className='py-3'>Lägg till vara</h4>
+        <div className='py-md-4 py-sm-2  pb-5'>
+            <h4 className='py-3 page-title'>Lägg till vara</h4>
             <form onSubmit={handleSubmit}>
                 <div className="form-group-additem">
                     <label htmlFor="itemName">Vara</label>

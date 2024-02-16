@@ -185,8 +185,8 @@ function Stock() {
 
 
     return (
-        <div className='py-md-4 py-sm-2'>
-            <h4 className='py-3'>Köket</h4>
+        <div className='py-md-4 py-sm-2  pb-5'>
+            <h4 className='py-3 page-title'>Köket</h4>
             {/* <h3 className='my-3'>Items</h3> */}
             <form className="form-inline">
                 <input
@@ -243,7 +243,7 @@ function Stock() {
                     <div className="modal-dialog" role="document">
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h5 className="modal-title">{editedItem.itemName} - {editedItem.quantity} {editedItem.unitName} </h5>
+                                <h5 className="modal-title">{editedItem.itemName}</h5>
                                 <button type="button" className="close" onClick={closeModal}>
                                     <span>&times;</span>
                                 </button>
@@ -251,25 +251,33 @@ function Stock() {
                             <div className="modal-body" >
                                 <form onSubmit={submitEditItem}>
                                     {/* Form inputs with pre-filled values */}
-                                    <div className="form-group-modal">
-                                        <label htmlFor="itemName">Vara</label>
-                                        <input className="modal-input" type="text" name="itemName" value={editedItem.itemName} onChange={handleInputChange} />
+                                    <div className='d-flex'>
+                                        <div className="form-group-modal">
+                                            <label htmlFor="itemName">Vara</label>
+                                            <input className="modal-input" type="text" name="itemName" value={editedItem.itemName} onChange={handleInputChange} />
+                                        </div>
+                                        <div className="form-group-modal ml-1">
+                                            <label htmlFor="categoryID">Kategori</label>
+                                            <select className="modal-input" type="number" name="categoryID" value={editedItem.categoryID} onChange={handleInputChange} >
+                                                {categories.map(category => (
+                                                    <option key={category.categoryID} value={category.categoryID}>{category.categoryName}</option>
+                                                ))}
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div className="form-group-modal">
-                                        <label htmlFor="categoryID">Kategori</label>
-                                        <select className="modal-input" type="number" name="categoryID" value={editedItem.categoryID} onChange={handleInputChange} >
-                                            {categories.map(category => (
-                                                <option key={category.categoryID} value={category.categoryID}>{category.categoryName}</option>
-                                            ))}
-                                        </select>
-                                    </div>
-                                    <div className="form-group-modal">
-                                        <label htmlFor="unitId">Enhet</label>
-                                        <select className="modal-input" type="number" name="unitId" defaultValue={editedItem.unitID} onChange={handleInputChange}>
-                                            {units.map(unit => (
-                                                <option key={unit.unitID} value={unit.unitID}>{unit.unitName}</option>
-                                            ))}
-                                        </select>
+                                    <div className='d-flex'>
+                                        <div className="form-group-modal">
+                                            <label htmlFor="itemName">Quantity</label>
+                                            <input className="modal-input" type="text" name="quantity" value={editedItem.quantity} onChange={handleInputChange} />
+                                        </div>
+                                        <div className="form-group-modal ml-1">
+                                            <label htmlFor="unitId">Enhet</label>
+                                            <select className="modal-input" type="number" name="unitId" defaultValue={editedItem.unitID} onChange={handleInputChange}>
+                                                {units.map(unit => (
+                                                    <option key={unit.unitID} value={unit.unitID}>{unit.unitName}</option>
+                                                ))}
+                                            </select>
+                                        </div>
                                     </div>
 
                                     {/* Other inputs */}
