@@ -13,6 +13,7 @@
     width: 100%;
 }
 
+
 .nav-box {
     display: flex;
     text-align: center;
@@ -40,9 +41,66 @@
     color: #000000;
     border-radius: 4px;
     /* padding: 3em 5em; */
-    box-shadow: 0 4px 8px rgba(254, 254, 254, 0.1);
+    box-shadow: 0 1px 10px 2px rgba(254, 254, 254, 0.1);
     margin: 0.2em;
     text-decoration: none;
+}
+
+.nav-box:hover i {
+    transition: 0.4s;
+    transform: rotate(360deg);
+}
+
+.status-wrapper {
+    /* border: 0.5px solid rgb(148, 148, 148);
+    background-color: rgb(243, 243, 243, 0.75);
+    color: #2e2e2e;
+    border-radius: 1px;
+    box-shadow: 0 4px 8px rgba(254, 254, 254, 0.5);
+    margin: auto; width: 50%;
+    margin-top: 0.1em; */
+    width: 100%;
+}
+
+.circle-box {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 0.5px solid rgb(148, 148, 148); */
+    border-bottom: 0.5px solid rgb(34, 34, 34);
+    background-color: transparent;
+    color: #2e2e2e;
+    border-radius: 1px;
+    height: 12em;
+    width: 15em;
+    margin: 0.2em;
+    /* box-shadow: 0 1px 10px 1px rgba(254, 254, 254, 0.1); */
+
+}
+
+.circle-box h5 {
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    color: rgb(7, 7, 7);
+}
+
+.circle {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 0.5px solid rgb(22, 22, 22);
+    background-color: transparent;
+    background-color: rgb(243, 243, 243, 0.1);
+    color: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-top: 0.5em;
 }
 
 
@@ -52,9 +110,10 @@
         width: 100%;
         padding: 0 0.3em;
     }
+
     .nav-box {
         border: 0.5px solid rgb(179, 179, 179);
-        background-color: rgb(247, 247, 247);
+        background-color: rgb(247, 247, 247, 0.9);
         border-radius: 6px;
         padding: 2.5em 3.5em;
         height: 10em;

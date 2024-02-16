@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 // importing bg images
 import bgImg1 from '../../assets/images/bg1.jpg';
@@ -9,31 +10,45 @@ import bgImg4 from '../../assets/images/bg4.jpg';
 import bgImg5 from '../../assets/images/bg5.jpg';
 import bgImg6 from '../../assets/images/bg6.jpg';
 
-
-
 //import css
 import '../../assets/css/home.css';
 
+
 //start apge
 function Home() {
+
     //defining states
+    const [items, setItems] = useState([]);
 
+    //generate an bg image to home.js
     const generateRandomBG = () => {
-
         //array with bg-images
         let imgArray = [bgImg1, bgImg2, bgImg3, bgImg4, bgImg5, bgImg6];
-
         let randomIndex = Math.floor(Math.random() * imgArray.length);
         //choosen bg-image (path to image)
         let randomImg = imgArray[randomIndex];
-
         let BGel = document.getElementById("home-wrapper");
         BGel.style.backgroundImage = `url(${randomImg})`;
     }
 
 
+    // Function to fetch items from the API
+    const fetchItems = async () => {
+        try {
+            const response = await axios.get('http://localhost:5249/api/item');
+            setItems(response.data);
+            console.log(response.data);
+        } catch (error) {
+            // setError(error);
+            console.log(error);
+        }
+    };
+
+
+
     useEffect(() => {
         generateRandomBG();
+        fetchItems();
     }, []);
 
 
@@ -78,6 +93,24 @@ function Home() {
                         <i className="fa-solid fa-2x fa-gear"></i>
                     </div>
                 </Link>
+            </div>
+
+            <div className="status-wrapper d-flex justify-content-center">
+                <div className="circle-box">
+                    <div>
+                        <h5>Antal olika varor i köket: </h5>
+                    </div>
+                    <div className="circle">{items.length}
+                    </div>
+                </div>
+                <div className="circle-box">
+                    <div>
+                        <h5>Totalt antal varor i köket: </h5>
+                    </div>
+                    <div className="circle">
+                        {items.reduce((sum, item) => sum + item.amount, 0)}
+                    </div>
+                </div>
             </div>
 
         </div>

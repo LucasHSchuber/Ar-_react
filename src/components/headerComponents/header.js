@@ -4,7 +4,7 @@ import { Navbar, Nav, Container, NavDropdown, Form, FormControl, Button } from '
 
 //import css
 import '../../assets/css/header.css';
-import logo from '../../assets/images/mountain.png';
+import logo from '../../assets/images/mountain2.png';
 
 
 //header

@@ -220,6 +220,7 @@ function Stock() {
                             <td className='th-force-small' style={{ border: 'none', borderBottom: '1px dotted black' }}>
                                 <input
                                     style={{ border: 'none' }}
+                                    id="amount"
                                     className='th-force-small'
                                     type="number"
                                     pattern="[0-9]*"
