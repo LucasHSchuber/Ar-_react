@@ -25,7 +25,7 @@ form {
 }
 
 .form-group input {
-    height: 2.6em;
+    height: 3em;
     width: 50%;
     padding: 0.4em;
 }
@@ -81,7 +81,7 @@ form {
 
 @media (max-width: 772px) {
     .form-group input {
-        height: 2.6em;
+        height: 3em;
         width: 90%;
     }
 

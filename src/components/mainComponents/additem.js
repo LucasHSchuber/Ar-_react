@@ -200,7 +200,7 @@ function AddItem() {
             )}
 
 
-            <hr className='hr'></hr>
+            <hr className='hr mt-5'></hr>
 
             <div className='my-3'>
                 <h5 className='py-3'>Tillagda varor idag:</h5>

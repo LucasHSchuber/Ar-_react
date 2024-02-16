@@ -3,11 +3,11 @@ form {
 }
 
 .form-group-additem input {
-    height: 2.6em;
+    height: 3em;
 }
 
 .form-group-additem select {
-    height: 2.6em;
+    height: 3em;
     color: black !important;
 }
 
@@ -29,6 +29,7 @@ form {
 
 .hr {
     border: 0.2px solid rgb(89, 89, 89);
+    
 }
 
 
@@ -41,12 +42,12 @@ form {
 
 @media (min-width: 772px) {
     .form-group-additem input {
-        height: 2.6em;
+        height: 3em;
         width: 20em;
     }
 
     .form-group-additem select {
-        height: 2.6em;
+        height: 3em;
         width: 10em;
         color: black !important;
     }

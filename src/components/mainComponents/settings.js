@@ -237,7 +237,7 @@ function Settings() {
                         <input
                             id="category"
                             className='ml-1'
-                            placeholder='Nytt namn på kategorin'
+                            placeholder='Nytt namn'
                             value={updatedCategory}
                             onChange={(e) => setUpdatedCategory(e.target.value)}
                             required
@@ -293,7 +293,7 @@ function Settings() {
                         <input
                             id="unit"
                             className='ml-1'
-                            placeholder='Nytt namn på enheten'
+                            placeholder='Nytt namn'
                             value={updatedUnit}
                             onChange={(e) => setUpdatedUnit(e.target.value)}
                             required

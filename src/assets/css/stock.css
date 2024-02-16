@@ -17,6 +17,7 @@ th {
 
 .th-force-small {
     width: 8em !important;
+    height: 2.5em !important;
 }
 
 td {
@@ -60,7 +61,7 @@ tr {
 
 @media (max-width: 772px) {
     table {
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 
     input {
@@ -135,7 +136,7 @@ tr {
 }
 
 .modal-input {
-    height: 2.6em;
+    height: 3em;
     width: 10em;
     margin-top: -0.2em;
 }
@@ -167,7 +168,7 @@ label {
 
 @media (max-width: 456px) {
     .modal-input {
-        height: 2.6em;
+        height: 3em !important;
         width: 8.5em;
         margin-top: -0.2em;
     }

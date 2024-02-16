@@ -186,7 +186,7 @@ function Stock() {
 
     return (
         <div className='py-md-4 py-sm-2  pb-5'>
-            <h4 className='py-3 page-title'>Köket</h4>
+            <h4 className='pt-3 page-title'>Köket</h4>
             {/* <h3 className='my-3'>Items</h3> */}
             <form className="form-inline">
                 <input
