@@ -113,7 +113,7 @@ function Information() {
                 ))}
             </div>
 
-            <button className="information-button my-3" onClick={openInformationForm}>
+            <button className="information-button btn my-3" onClick={openInformationForm}>
                 {openForm ? (
                     <>
                         Skriv nytt <i className="fa-solid fa-chevron-down"></i>
@@ -165,7 +165,7 @@ function Information() {
                     </div>
 
                     <div>
-                        <button className="send-btn" type='submit' >Skicka <i class="fa-solid fa-plus"></i></button>
+                        <button className="send-btn btn" type='submit' >Skicka <i class="fa-solid fa-plus"></i></button>
                     </div>
                 </form>
 

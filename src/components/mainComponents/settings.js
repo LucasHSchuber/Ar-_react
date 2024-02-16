@@ -224,7 +224,7 @@ function Settings() {
                                 <option key={category.categoryID} value={category.categoryID}>{category.categoryName}</option>
                             ))}
                         </select>
-                        <button className="add-btn-settings mx-1" type='submit' onClick={() => confirmDeleteCategory(deletedCategoryId)}>Radera kategori <i class="fa-solid fa-trash-can"></i></button>
+                        <button className="btn add-btn-settings mx-1" type='submit' onClick={() => confirmDeleteCategory(deletedCategoryId)}>Radera kategori <i class="fa-solid fa-trash-can"></i></button>
                     </div>
                     <hr className='hr-divider'></hr>
                     <div className="form-group-settings my-4">
@@ -243,7 +243,7 @@ function Settings() {
                             required
                         >
                         </input>
-                        <button className="add-btn-settings btn-responsive-settings mx-sm-1" type='submit' onClick={() => confirmEditCategory(oldCategoryId, updatedCategory)}>Spara ändringar <i class="fa-solid fa-check"></i></button>
+                        <button className="btn add-btn-settings btn-responsive-settings mx-sm-1" type='submit' onClick={() => confirmEditCategory(oldCategoryId, updatedCategory)}>Spara ändringar <i class="fa-solid fa-check"></i></button>
                     </div>
                     <hr className='hr-divider'></hr>
                     <div>
@@ -257,7 +257,7 @@ function Settings() {
                                 required
                             >
                             </input>
-                            <button className="add-btn-settings mx-1" type='submit' >Lägg till kategori <i class="fa-solid fa-plus"></i></button>
+                            <button className="btn add-btn-settings mx-1" type='submit' >Lägg till kategori <i class="fa-solid fa-plus"></i></button>
 
                             {error.category && (
                                 <div className="mt-3">Ops.. {error.category}</div>
@@ -280,7 +280,7 @@ function Settings() {
                                 <option key={unit.unitID} value={unit.unitID}>{unit.unitName}</option>
                             ))}
                         </select>
-                        <button className="add-btn-settings mx-1" type='submit' onClick={() => confirmDeleteUnit(deletedUnitId)}>Radera enhet <i class="fa-solid fa-trash-can"></i></button>
+                        <button className="btn add-btn-settings mx-1" type='submit' onClick={() => confirmDeleteUnit(deletedUnitId)}>Radera enhet <i class="fa-solid fa-trash-can"></i></button>
                     </div>
                     <hr className='hr-divider'></hr>
                     <div className="form-group-settings my-4">
@@ -299,7 +299,7 @@ function Settings() {
                             required
                         >
                         </input>
-                        <button className="add-btn-settings btn-responsive-settings mx-sm-1" type='submit' onClick={() => confirmEditUnit(oldUnitId, updatedUnit)}>Spara ändringar <i class="fa-solid fa-check"></i></button>
+                        <button className="btn add-btn-settings btn-responsive-settings mx-sm-1" type='submit' onClick={() => confirmEditUnit(oldUnitId, updatedUnit)}>Spara ändringar <i class="fa-solid fa-check"></i></button>
                     </div>
                     <hr className='hr-divider'></hr>
                     <form onSubmit={(e) => PostNewUnit(e, newUnit)}>
@@ -312,7 +312,7 @@ function Settings() {
                             required
                         >
                         </input>
-                        <button className="add-btn-settings mx-1" type='submit' >Lägg till enhet <i class="fa-solid fa-plus"></i></button>
+                        <button className="btn add-btn-settings mx-1" type='submit' >Lägg till enhet <i class="fa-solid fa-plus"></i></button>
 
                         {error.unit && (
                             <div className="mt-3">Ops.. {error.unit}</div>

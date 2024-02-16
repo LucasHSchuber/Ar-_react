@@ -192,7 +192,7 @@ function AddItem() {
                     </select>
                 </div>
 
-                <button className="add-btn-additem mt-3" type="submit">Lägg till vara <i class="fa-solid fa-plus"></i></button>
+                <button className="add-btn-additem btn mt-3" type="submit">Lägg till vara <i class="fa-solid fa-plus"></i></button>
             </form>
 
             {error.errorAlreadyExistsInDb && (

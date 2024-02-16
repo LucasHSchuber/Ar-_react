@@ -6,34 +6,37 @@
 
 input {
     width: 10em;
-    height: 2.6em;
+    height: 3em;
 }
 
 .form-group-settings input {
     width: 10em;
-    height: 2.6em;
+    height: 3em;
 }
 
 .form-group-settings select {
-    height: 2.6em;
+    height: 3em;
     color: black !important;
 }
 
-.add-btn-settings {
+/* .add-btn-settings {
     background-color: rgb(17, 17, 17);
     border: none;
     color: rgb(223, 223, 223);
-    padding: 0.6em 1em;
+    padding: 0.7em 1em;
     border-radius: 2px;
     transition: 0.2s;
 }
-.hr-divider{
-    display: none;
-}
+
 .add-btn-settings:hover {
     background-color: black;
     color: rgb(223, 223, 223);
+} */
+
+.hr-divider {
+    display: none;
 }
+
 
 @media (max-width: 772px) {
     .btn-responsive-settings {

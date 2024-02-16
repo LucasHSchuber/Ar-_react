@@ -282,7 +282,7 @@ function Stock() {
                                     </div>
 
                                     {/* Other inputs */}
-                                    <button type="submit" className="save-changes-btn mt-3">Spara ändringar <i class="fa-solid fa-check"></i></button>
+                                    <button type="submit" className="save-changes-btn btn mt-3">Spara ändringar <i class="fa-solid fa-check"></i></button>
                                 </form>
                             </div>
                             <div className='modal-footer'>

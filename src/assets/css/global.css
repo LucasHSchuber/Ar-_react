@@ -8,6 +8,8 @@ html {
     color: rgb(20, 20, 20);
 }
 
+
+/* forms */
 input,
 select,
 textarea {
@@ -17,7 +19,23 @@ textarea {
     box-sizing: border-box;
 }
 
-.page-title{
+.page-title {
     font-weight: 600;
     font-size: 1.5em;
+}
+
+
+/* buttons */
+.btn {
+    background-color: rgb(23, 23, 23);
+    border: none;
+    color: rgb(223, 223, 223) !important;
+    padding: 0.8em 1em;
+    border-radius: 2px !important;
+    transition: 0.2s;
+}
+
+.add-btn-settings:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255) !important; 
 }

@@ -50,7 +50,7 @@ form {
     color: rgb(255, 0, 0);
 }
 
-.information-button {
+/* .information-button {
     background-color: rgb(17, 17, 17);
     border: none;
     color: rgb(223, 223, 223);
@@ -62,8 +62,8 @@ form {
 .information-button:hover {
     background-color: black;
     color: rgb(223, 223, 223);
-}
-
+} */
+/* 
 .send-btn {
     background-color: rgb(17, 17, 17);
     border: none;
@@ -77,7 +77,7 @@ form {
 .send-btn:hover {
     background-color: black;
     color: rgb(223, 223, 223);
-}
+} */
 
 @media (max-width: 772px) {
     .form-group input {
