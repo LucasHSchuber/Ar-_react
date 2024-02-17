@@ -3,7 +3,7 @@
 
 .home-wrapper {
     background-image: url("../../assets/images/bg2.jpg");
-    height: 82.41vh ;
+    height: 100vh;
     background-size: cover;
     background-position: center;
 }
@@ -102,6 +102,11 @@
 
 
 @media (max-width: 491px) {
+
+    .home-wrapper {
+        height: 82.41vh;
+    }
+
     .nav-wrapper {
         width: 100%;
         padding: 0 0.3em;
