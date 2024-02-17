@@ -226,7 +226,7 @@ function AddItem() {
                                 <td>{item.categoryName}</td>
                                 <td>{item.amount}</td>
                                 <td>
-                                    <button className="del-btn" onClick={() => confirmDelete(item)}><i class="fa-solid fa-trash"></i></button>
+                                    <button className="del-btn" onClick={() => confirmDelete(item)}><i class="icon fa-solid fa-trash"></i></button>
                                 </td>
                             </tr>
                         ))}

@@ -110,9 +110,11 @@ tr {
 .modal-content {
     padding: 2em;
 }
-.modal-title{
+
+.modal-title {
     font-weight: 600;
 }
+
 .modal-header {
     display: flex;
     justify-content: space-between;
@@ -137,6 +139,7 @@ tr {
     height: 3em;
     width: 10em;
     margin-top: -0.2em;
+    color: black !important;
 }
 
 .close {
@@ -146,6 +149,9 @@ tr {
 label {
     display: block;
     font-weight: bold;
+}
+.icon{
+    color:black !important;
 }
 
 /* .save-changes-btn {

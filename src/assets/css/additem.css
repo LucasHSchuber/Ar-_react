@@ -32,12 +32,15 @@ form {
 
 }
 
-
 .error-message {
     color: rgb(255, 64, 64);
     font-weight: 800;
     font-size: 1.1em;
     text-align: left;
+}
+
+.icon {
+    color: black !important;
 }
 
 @media (min-width: 772px) {

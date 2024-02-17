@@ -232,8 +232,8 @@ function Stock() {
                                 />
                             </td>
                             <td className=''>
-                                <button className="edit-btn" onClick={() => openEditModal(item)}><i class="fa-solid fa-pen"></i></button>
-                                <button className="del-btn" onClick={() => confirmDelete(item)}><i class="fa-solid fa-trash"></i></button>
+                                <button className="edit-btn" onClick={() => openEditModal(item)}><i class="icon fa-solid fa-pen"></i></button>
+                                <button className="del-btn" onClick={() => confirmDelete(item)}><i class="icon fa-solid fa-trash"></i></button>
                             </td>
                         </tr>
                     ))}
