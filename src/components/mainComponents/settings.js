@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+// Importing api url and enpoints
+import {BASE_URL, BASE_URL2, ITEM_ENDPOINT, CATEGORY_ENDPOINT, INFORMATION_ENDPOINT, UNIT_ENDPOINT } from '../../api';
+
 //import css
 import '../../assets/css/settings.css';
 
@@ -33,7 +36,7 @@ function Settings() {
     //fetching categories from categories table
     const fetchCategories = async () => {
         try {
-            const response = await axios.get('http://localhost:5249/api/category');
+            const response = await axios.get(`${BASE_URL}${CATEGORY_ENDPOINT}`);
             console.log(response.data);
             setCategories(response.data);
 
@@ -47,7 +50,7 @@ function Settings() {
         e.preventDefault();
         console.log("posting new category" + newCategory);
         try {
-            const response = await axios.post('http://localhost:5249/api/category', {
+            const response = await axios.post(`${BASE_URL}${CATEGORY_ENDPOINT}`, {
                 categoryName: newCategory
             });
             console.log(response.data);
@@ -76,7 +79,7 @@ function Settings() {
         // e.preventDefault();
         console.log("deleting category" + id);
         try {
-            const response = await axios.delete(`http://localhost:5249/api/category/${id}`)
+            const response = await axios.delete(`${BASE_URL}${CATEGORY_ENDPOINT}/${id}`)
             fetchCategories();
         } catch (error) {
             console.log(error);
@@ -94,7 +97,7 @@ function Settings() {
         console.log("new: " + updatedCategory);
         console.log("id: " + id);
         try {
-            const response = await axios.put(`http://localhost:5249/api/category/${id}`, {
+            const response = await axios.put(`${BASE_URL}${CATEGORY_ENDPOINT}/${id}`, {
                 CategoryID: id,
                 CategoryName: updatedCategory
             }, {
@@ -119,7 +122,7 @@ function Settings() {
     //fetching units from unit table
     const fetchUnits = async () => {
         try {
-            const response = await axios.get('http://localhost:5249/api/unit');
+            const response = await axios.get(`${BASE_URL}${UNIT_ENDPOINT}`);
             console.log(response.data);
             setUnits(response.data);
 
@@ -134,7 +137,7 @@ function Settings() {
         e.preventDefault();
         console.log("posting new unit" + newUnit);
         try {
-            const response = await axios.post('http://localhost:5249/api/unit', {
+            const response = await axios.post(`${BASE_URL}${UNIT_ENDPOINT}`, {
                 UnitName: newUnit
             });
             console.log(response.data);
@@ -163,7 +166,7 @@ function Settings() {
         // e.preventDefault();
         console.log("deleting unit" + id);
         try {
-            const response = await axios.delete(`http://localhost:5249/api/unit/${id}`)
+            const response = await axios.delete(`${BASE_URL}${UNIT_ENDPOINT}/${id}`)
             fetchUnits();
         } catch (error) {
             console.log(error);
@@ -182,7 +185,7 @@ function Settings() {
         console.log("new: " + updatedUnit);
         console.log("id: " + id);
         try {
-            const response = await axios.put(`http://localhost:5249/api/unit/${id}`, {
+            const response = await axios.put(`${BASE_URL}${UNIT_ENDPOINT}/${id}`, {
                 UnitID: id,
                 UnitName: updatedUnit
             }, {

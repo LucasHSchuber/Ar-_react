@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+// Importing api url and enpoints
+import { BASE_URL, BASE_URL2, ITEM_ENDPOINT, CATEGORY_ENDPOINT, INFORMATION_ENDPOINT, UNIT_ENDPOINT } from '../../api';
+
 //import css
 import '../../assets/css/stock.css';
 
@@ -28,7 +31,7 @@ function Stock() {
     //fetching categories from categories table
     const fetchCategories = async () => {
         try {
-            const response = await axios.get('http://localhost:5249/api/category');
+            const response = await axios.get(`${BASE_URL}${ITEM_ENDPOINT}`);
             console.log(response.data);
             setCategories(response.data);
 
@@ -40,7 +43,7 @@ function Stock() {
     //fetching units from unit table
     const fetchUnits = async () => {
         try {
-            const response = await axios.get('http://localhost:5249/api/unit');
+            const response = await axios.get(`${BASE_URL}${UNIT_ENDPOINT}`);
             console.log(response.data);
             setUnits(response.data);
 
@@ -52,7 +55,7 @@ function Stock() {
     // Function to fetch items from the API
     const fetchItems = async () => {
         try {
-            const response = await axios.get('http://localhost:5249/api/item');
+            const response = await axios.get(`${BASE_URL}${ITEM_ENDPOINT}`);
             setItems(response.data);
             console.log(response.data);
         } catch (error) {
@@ -66,7 +69,7 @@ function Stock() {
         // Function to fetch items from search 
         const fetchSearchResults = async () => {
             try {
-                const response = await axios.get(`http://localhost:5249/api/item/search/${searchString}`)
+                const response = await axios.get(`${BASE_URL}${ITEM_ENDPOINT}/search/${searchString}`)
                 console.log(response.data);
                 setSearchResult(response.data);
 
@@ -99,7 +102,7 @@ function Stock() {
         //trigger this method to update table when search is the the search field.
         const fetchSearchResults = async () => {
             try {
-                const response = await axios.get(`http://localhost:5249/api/item/search/${searchString}`);
+                const response = await axios.get(`${BASE_URL}${ITEM_ENDPOINT}/search/${searchString}`);
                 console.log(response.data);
                 setSearchResult(response.data);
             } catch (error) {
@@ -110,7 +113,7 @@ function Stock() {
         try {
             if (amount !== "") { //make sure input not empty to update db with empty variable
 
-                const response = await axios.put(`http://localhost:5249/api/item/updatestock/${id}?amount=${amount}`);
+                const response = await axios.put(`${BASE_URL}${ITEM_ENDPOINT}/updatestock/${id}?amount=${amount}`);
                 console.log(response.data);
                 fetchItems();
                 fetchSearchResults(); //trigger method to update table dynamically
@@ -133,7 +136,7 @@ function Stock() {
         console.log(id);
         try {
             // Send delete request to the API
-            await axios.delete(`http://localhost:5249/api/item/${id}`);
+            await axios.delete(`${BASE_URL}${ITEM_ENDPOINT}/${id}`);
             console.log("Item deleted");
             // Fetch updated items after deleted
             fetchItems();
@@ -151,7 +154,7 @@ function Stock() {
         console.log(id);
         console.log(editedItem);
         try {
-            const response = await axios.put(`http://localhost:5249/api/item/${id}`, editedItem, {
+            const response = await axios.put(`${BASE_URL}${ITEM_ENDPOINT}/${id}`, editedItem, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

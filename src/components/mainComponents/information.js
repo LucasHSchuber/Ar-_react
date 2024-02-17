@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+// Importing api url and enpoints
+import { BASE_URL, BASE_URL2, ITEM_ENDPOINT, CATEGORY_ENDPOINT, INFORMATION_ENDPOINT, UNIT_ENDPOINT } from '../../api';
+
 //import css
 import '../../assets/css/information.css';
 
@@ -19,7 +22,7 @@ function Information() {
     //fetching information from db
     const fetchInformation = async () => {
         try {
-            const response = await axios.get('http://localhost:5249/api/information');
+            const response = await axios.get(`${BASE_URL}${INFORMATION_ENDPOINT}`);
             console.log(response.data);
             setInformation(response.data);
 
@@ -40,7 +43,7 @@ function Information() {
         console.log("handlesubmit test");
 
         try {
-            const response = await axios.post('http://localhost:5249/api/information', {
+            const response = await axios.post(`${BASE_URL}${INFORMATION_ENDPOINT}`, {
                 Title: title,
                 Writer: writer,
                 Description: description
@@ -85,7 +88,7 @@ function Information() {
         console.log(id);
         try {
             // Send delete request to the API
-            await axios.delete(`http://localhost:5249/api/information/${id}`);
+            await axios.delete(`${BASE_URL}${INFORMATION_ENDPOINT}/${id}`);
             console.log("Information deleted");
             fetchInformation();
         } catch (error) {

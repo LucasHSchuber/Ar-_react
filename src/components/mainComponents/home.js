@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+// Importing api url and enpoints
+import { BASE_URL, BASE_URL2, ITEM_ENDPOINT, CATEGORY_ENDPOINT, INFORMATION_ENDPOINT, UNIT_ENDPOINT } from '../../api';
+
+
 // importing bg images
 import bgImg1 from '../../assets/images/bg1.jpg';
 import bgImg2 from '../../assets/images/bg2.jpg';
@@ -35,7 +39,7 @@ function Home() {
     // Function to fetch items from the API
     const fetchItems = async () => {
         try {
-            const response = await axios.get('http://localhost:5249/api/item');
+            const response = await axios.get(`${BASE_URL}${ITEM_ENDPOINT}`);
             setItems(response.data);
             console.log(response.data);
         } catch (error) {

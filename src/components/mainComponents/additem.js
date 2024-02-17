@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+// Importing api url and enpoints
+import { BASE_URL, BASE_URL2, ITEM_ENDPOINT, CATEGORY_ENDPOINT, INFORMATION_ENDPOINT, UNIT_ENDPOINT } from '../../api';
+
 //import css
 import '../../assets/css/additem.css';
 
@@ -29,7 +32,7 @@ function AddItem() {
     //fetching categories from categories table
     const fetchCategories = async () => {
         try {
-            const response = await axios.get('http://localhost:5249/api/category');
+            const response = await axios.get(`${BASE_URL}${CATEGORY_ENDPOINT}`);
             console.log(response.data);
             setCategories(response.data);
 
@@ -41,7 +44,7 @@ function AddItem() {
     //fetching units from unit table
     const fetchUnits = async () => {
         try {
-            const response = await axios.get('http://localhost:5249/api/unit');
+            const response = await axios.get(`${BASE_URL}${UNIT_ENDPOINT}`);
             console.log(response.data);
             setUnits(response.data);
 
@@ -53,7 +56,7 @@ function AddItem() {
     // Function to fetch items from the API
     const fetchItemsToday = async () => {
         try {
-            const response = await axios.get('http://localhost:5249/api/item/today');
+            const response = await axios.get(`${BASE_URL}${ITEM_ENDPOINT}/today`);
             setItems(response.data);
             console.log(response.data);
         } catch (error) {
@@ -81,7 +84,7 @@ function AddItem() {
         console.log(amount);
 
         try {
-            const response = await axios.post('http://localhost:5249/api/item', {
+            const response = await axios.post(`${BASE_URL}${ITEM_ENDPOINT}`, {
                 ItemName: itemName,
                 CategoryID: categoryID,
                 Quantity: quantity,
@@ -118,7 +121,7 @@ function AddItem() {
         console.log(id);
         try {
             // Send delete request to the API
-            await axios.delete(`http://localhost:5249/api/item/${id}`);
+            await axios.delete(`${BASE_URL}${ITEM_ENDPOINT}/${id}`);
             console.log("Item deleted");
             // Fetch updated items after deleted
             fetchItemsToday();
