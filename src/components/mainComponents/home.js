@@ -12,7 +12,7 @@ import bgImg2 from '../../assets/images/bg2.jpg';
 import bgImg3 from '../../assets/images/bg3.jpg';
 import bgImg4 from '../../assets/images/bg4.jpg';
 import bgImg5 from '../../assets/images/bg5.jpg';
-import bgImg6 from '../../assets/images/bg6.jpg';
+// import bgImg6 from '../../assets/images/bg6.jpg';
 
 //import css
 import '../../assets/css/home.css';
@@ -27,7 +27,7 @@ function Home() {
     //generate an bg image to home.js
     const generateRandomBG = () => {
         //array with bg-images
-        let imgArray = [bgImg1, bgImg2, bgImg3, bgImg4, bgImg5, bgImg6];
+        let imgArray = [bgImg1, bgImg2, bgImg3, bgImg4, bgImg5];
         let randomIndex = Math.floor(Math.random() * imgArray.length);
         //choosen bg-image (path to image)
         let randomImg = imgArray[randomIndex];
