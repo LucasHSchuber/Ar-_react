@@ -31,7 +31,7 @@ function Stock() {
     //fetching categories from categories table
     const fetchCategories = async () => {
         try {
-            const response = await axios.get(`${BASE_URL}${ITEM_ENDPOINT}`);
+            const response = await axios.get(`${BASE_URL}${CATEGORY_ENDPOINT}`);
             console.log(response.data);
             setCategories(response.data);
 
